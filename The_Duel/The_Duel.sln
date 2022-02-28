@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Duel", "The_Duel\The_Duel.csproj", "{0110CF2F-4892-4FA9-B3FC-8135B270B746}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Duel", "The_Duel\The_Duel.csproj", "{B34A193A-C6CD-49A3-829E-5F63B2F52D13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0110CF2F-4892-4FA9-B3FC-8135B270B746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0110CF2F-4892-4FA9-B3FC-8135B270B746}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0110CF2F-4892-4FA9-B3FC-8135B270B746}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0110CF2F-4892-4FA9-B3FC-8135B270B746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34A193A-C6CD-49A3-829E-5F63B2F52D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34A193A-C6CD-49A3-829E-5F63B2F52D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34A193A-C6CD-49A3-829E-5F63B2F52D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34A193A-C6CD-49A3-829E-5F63B2F52D13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1A4FF83C-520D-451A-999F-09BF3B6729EC}
+		SolutionGuid = {1F6713B6-9672-45B9-A9BC-832492B4BDDB}
 	EndGlobalSection
 EndGlobal

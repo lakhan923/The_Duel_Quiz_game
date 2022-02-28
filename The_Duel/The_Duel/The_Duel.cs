@@ -1,18 +1,22 @@
-using Jypeli;
-using Jypeli.Assets;
-using Jypeli.Controls;
-using Jypeli.Widgets;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
 
-public class The_Duel : PhysicsGame
+/// @author Omanimi
+/// @version Päivämäärä
+/// <summary>
+/// 
+/// </summary>
+public class The_Duel
 {
-    public override void Begin()
+    /// <summary>
+    /// 
+    /// </summary>
+    public static void Main(string [] args)
     {
-        // Kirjoita ohjelmakoodisi tähän
 
-        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
-        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
-}
 
+}
