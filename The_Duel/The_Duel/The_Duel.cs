@@ -42,6 +42,7 @@ public class The_Duel : PhysicsGame
 
     public void CreateBoxes() 
     {
+        
         // create a question label
         for (int i = 0; i < answers.Length; i++)
         {
