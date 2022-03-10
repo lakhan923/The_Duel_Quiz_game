@@ -11,9 +11,13 @@ public class The_Duel : PhysicsGame
     private string[] lines;
     private Label[] answers = new Label[4];
     private Label question = new Label();
+   
+  
+
     public override void Begin()
     {
         string questions = "../../../../../questions.txt";
+       
         lines = File.ReadAllLines(questions);
 
         CreateBoxes();
@@ -21,9 +25,11 @@ public class The_Duel : PhysicsGame
         int x = RandomGen.NextInt(lines.Length);
         GenerateQuestionAndAnswers(x);
 
-
-
+      
        
+
+
+
         PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
@@ -33,8 +39,13 @@ public class The_Duel : PhysicsGame
         
         string[] data = lines[lineNumber].Split('|');
         // set the question text 
+
+
+        question.Text = data[0];
+
         for (int i = 0; i < answers.Length; i++)
         {
+            
             Label box = answers[i];
             box.Text = data[i + 1];
         }
@@ -52,8 +63,16 @@ public class The_Duel : PhysicsGame
             box.Text = "test";
             answers[i] = box;
         }
+
+        question = new Label();
+        question.Y = 20 + answers[0].Y;
+        Add(question);
     }
 
 
+   
+
+  
+    
 }
 
