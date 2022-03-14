@@ -69,10 +69,53 @@ public class The_Duel : PhysicsGame
         Add(question);
     }
 
+    void Menu()
+    {
+        List<Label> options;
+        options = new List<Label>();
+        Label option1 = answers[1];
+        Label option2 = answers[2];
+        Label option3 = answers[3];
+        Label option4 = answers[4];
 
-   
+        foreach (Label option in options)
+        {
+            Add(option);
+        }
 
-  
-    
+        Mouse.ListenOn(option1, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
+        Mouse.ListenOn(option2, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
+        Mouse.ListenOn(option3, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
+        Mouse.ListenOn(option4, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
+
+        Mouse.ListenOn(option1, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option1, true);
+        Mouse.ListenOn(option1, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option1, false);
+        Mouse.ListenOn(option2, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option2, true);
+        Mouse.ListenOn(option2, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option2, false);
+        Mouse.ListenOn(option3, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option3, true);
+        Mouse.ListenOn(option3, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option3, false);
+        Mouse.ListenOn(option4, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, true);
+        Mouse.ListenOn(option4, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, false);
+
+        
+    }
+    void MovingInMenu(Label option, bool on)
+    {
+        if (on)
+        {
+            option.TextColor = Color.Red;
+        }
+        else
+        {
+            option.TextColor = Color.Black;
+        }
+    }
+
+    void ChooseAnswer()
+    {
+
+    }
+
+
 }
 
