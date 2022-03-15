@@ -24,7 +24,7 @@ public class The_Duel : PhysicsGame
 
         int x = RandomGen.NextInt(lines.Length);
         GenerateQuestionAndAnswers(x);
-
+        Menu();
       
        
 
@@ -73,10 +73,10 @@ public class The_Duel : PhysicsGame
     {
         List<Label> options;
         options = new List<Label>();
-        Label option1 = answers[1];
-        Label option2 = answers[2];
-        Label option3 = answers[3];
-        Label option4 = answers[4];
+        Label option1 = answers[0];
+        Label option2 = answers[1];
+        Label option3 = answers[2];
+        Label option4 = answers[3];
 
         foreach (Label option in options)
         {
