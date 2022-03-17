@@ -11,6 +11,7 @@ public class The_Duel : PhysicsGame
     private string[] lines;
     private Label[] answers = new Label[4];
     private Label question = new Label();
+    string correctAnswer;
    
   
 
@@ -33,7 +34,10 @@ public class The_Duel : PhysicsGame
         PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
+    private void AloitaPeli()
+    {
 
+    }
     private void GenerateQuestionAndAnswers(int lineNumber)
     {
         
@@ -42,6 +46,7 @@ public class The_Duel : PhysicsGame
 
 
         question.Text = data[0];
+        string correctAnswer = data[data.Length -1];
 
         for (int i = 0; i < answers.Length; i++)
         {
@@ -49,7 +54,9 @@ public class The_Duel : PhysicsGame
             Label box = answers[i];
             box.Text = data[i + 1];
         }
+
     }
+
 
     public void CreateBoxes() 
     {
@@ -83,10 +90,10 @@ public class The_Duel : PhysicsGame
             Add(option);
         }
 
-        Mouse.ListenOn(option1, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
-        Mouse.ListenOn(option2, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
-        Mouse.ListenOn(option3, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
-        Mouse.ListenOn(option4, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null);
+        Mouse.ListenOn(option1, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option1, correctAnswer);
+        Mouse.ListenOn(option2, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option2, correctAnswer);
+        Mouse.ListenOn(option3, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option3, correctAnswer);
+        Mouse.ListenOn(option4, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option4, correctAnswer);
 
         Mouse.ListenOn(option1, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option1, true);
         Mouse.ListenOn(option1, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option1, false);
@@ -111,9 +118,10 @@ public class The_Duel : PhysicsGame
         }
     }
 
-    void ChooseAnswer()
+    void ChooseAnswer(Label option, string correctAnswer)
     {
-
+        if (option.Text == correctAnswer)
+            option.TextColor = Color.Green;
     }
 
 
