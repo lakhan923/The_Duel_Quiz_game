@@ -15,8 +15,7 @@ public class The_Duel : PhysicsGame
     string correctAnswer;
 <<<<<<< HEAD
 =======
-    private string[] data;
-   
+  
   
 >>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
 
@@ -40,10 +39,7 @@ public class The_Duel : PhysicsGame
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
 >>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
     }
-    private void AloitaPeli()
-    {
-
-    }
+   
     private void GenerateQuestionAndAnswers(int lineNumber)
     {
 <<<<<<< HEAD
@@ -139,7 +135,7 @@ public class The_Duel : PhysicsGame
         int correctIndex = int.Parse(correctAnswer);
         if (option.Text == data [correctIndex])
 >>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
-            option.TextColor = Color.Green;
+            option.TextColor = Color.Yellow;
     }
 
 
