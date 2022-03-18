@@ -13,6 +13,12 @@ public class The_Duel : PhysicsGame
     private Label[] answers = new Label[4];
     private Label question = new Label();
     string correctAnswer;
+<<<<<<< HEAD
+=======
+    private string[] data;
+   
+  
+>>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
 
     public override void Begin()
     {
@@ -22,25 +28,53 @@ public class The_Duel : PhysicsGame
         int x = RandomGen.NextInt(lines.Length);
         GenerateQuestionAndAnswers(x);
         Menu();
+<<<<<<< HEAD
 
+=======
+      
+       
+
+
+
+        PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
+        Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+>>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
     }
-
-    private void GenerateQuestionAndAnswers(int lineNumber)
+    private void AloitaPeli()
     {
 
+    }
+    private void GenerateQuestionAndAnswers(int lineNumber)
+    {
+<<<<<<< HEAD
+
         string[] data = lines[lineNumber].Split('|');
+=======
+        
+        data = lines[lineNumber].Split('|');
+>>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
         // set the question text 
         question.Text = data[0];
+<<<<<<< HEAD
         correctAnswer = data[data.Length - 1];
+=======
+        correctAnswer = data[data.Length -1];
+>>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
 
         for (int i = 0; i < answers.Length; i++)
         {
             Label box = answers[i];
             box.Text = data[i + 1];
         }
+
     }
 
+<<<<<<< HEAD
     public void CreateBoxes()
+=======
+
+    public void CreateBoxes() 
+>>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
     {
         // create a question label
         for (int i = 0; i < answers.Length; i++)
@@ -99,7 +133,12 @@ public class The_Duel : PhysicsGame
 
     void ChooseAnswer(Label option, string correctAnswer)
     {
+<<<<<<< HEAD
         if (option.Text == correctAnswer)
+=======
+        int correctIndex = int.Parse(correctAnswer);
+        if (option.Text == data [correctIndex])
+>>>>>>> 49a8ad761f5ff2eb70679c8d618023b0407ea57b
             option.TextColor = Color.Green;
     }
 
