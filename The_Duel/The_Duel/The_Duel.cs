@@ -12,6 +12,7 @@ public class The_Duel : PhysicsGame
     private Label[] answers = new Label[4];
     private Label question = new Label();
     string correctAnswer;
+    private string[] data;
    
   
 
@@ -41,7 +42,7 @@ public class The_Duel : PhysicsGame
     private void GenerateQuestionAndAnswers(int lineNumber)
     {
         
-        string[] data = lines[lineNumber].Split('|');
+        data = lines[lineNumber].Split('|');
         // set the question text 
 
 
@@ -120,7 +121,8 @@ public class The_Duel : PhysicsGame
 
     void ChooseAnswer(Label option, string correctAnswer)
     {
-        if (option.Text == correctAnswer)
+        int correctIndex = int.Parse(correctAnswer);
+        if (option.Text == data [correctIndex])
             option.TextColor = Color.Green;
     }
 
