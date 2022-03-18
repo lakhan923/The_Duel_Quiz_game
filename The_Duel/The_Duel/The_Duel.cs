@@ -46,7 +46,7 @@ public class The_Duel : PhysicsGame
 
 
         question.Text = data[0];
-        string correctAnswer = data[data.Length -1];
+        correctAnswer = data[data.Length -1];
 
         for (int i = 0; i < answers.Length; i++)
         {
