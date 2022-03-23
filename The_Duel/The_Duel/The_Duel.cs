@@ -13,8 +13,9 @@ public class The_Duel : PhysicsGame
     private Label question = new Label();
     string correctAnswer;
     private string[] data;
-   
-  
+
+    private IntMeter player1Points;
+    private IntMeter player2Points;
 
     public override void Begin()
     {
@@ -27,6 +28,7 @@ public class The_Duel : PhysicsGame
         int x = RandomGen.NextInt(lines.Length);
         GenerateQuestionAndAnswers(x);
         Menu();
+        Points();
       
        
 
@@ -37,6 +39,29 @@ public class The_Duel : PhysicsGame
     }
     private void AloitaPeli()
     {
+
+    }
+
+    void Points()
+    {
+        player1Points = PlayerPoints(Screen.Left + 100.0, Screen.Top - 100.0);
+        player2Points = PlayerPoints(Screen.Right - 100.0, Screen.Top - 100.0);
+    }
+    IntMeter PlayerPoints(double x, double y)
+    {
+        IntMeter calculator = new IntMeter(0);
+        calculator.MaxValue = 10;
+        
+
+        Label screen = new Label();
+        screen.BindTo(calculator);
+        screen.X = x;
+        screen.Y = y;
+        screen.TextColor = Color.Black;
+        screen.BorderColor = Level.Background.Color;
+        screen.Color = Level.Background.Color;
+
+        return calculator;
 
     }
     private void GenerateQuestionAndAnswers(int lineNumber)
@@ -122,8 +147,11 @@ public class The_Duel : PhysicsGame
     void ChooseAnswer(Label option, string correctAnswer)
     {
         int correctIndex = int.Parse(correctAnswer);
-        if (option.Text == data [correctIndex])
-            option.TextColor = Color.Green;
+        if (option.Text == data[correctIndex])
+            MessageDisplay.Add("Correct!");
+        //option.TextColor = Color.Green;
+        else MessageDisplay.Add("Incorrect!");
+            //option.TextColor = Color.Aqua;
     }
 
 
