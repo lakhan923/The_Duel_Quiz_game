@@ -60,6 +60,7 @@ public class The_Duel : PhysicsGame
         screen.TextColor = Color.Black;
         screen.BorderColor = Level.Background.Color;
         screen.Color = Level.Background.Color;
+        Add(screen);
 
         return calculator;
 
