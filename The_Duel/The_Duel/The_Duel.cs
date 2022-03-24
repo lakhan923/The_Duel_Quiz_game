@@ -47,9 +47,11 @@ public class The_Duel : PhysicsGame
         TimeCounter.Start();
 
         Label TimeDisplay = new Label();
-        TimeDisplay.TextColor = Color.White;
+        TimeDisplay.TextColor = Color.Red;
         TimeDisplay.DecimalPlaces = 1;
         TimeDisplay.BindTo(downCounter);
+        TimeDisplay.X = 0.0;
+        TimeDisplay.Y = 200;
         Add(TimeDisplay);
     }
 
