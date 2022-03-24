@@ -16,42 +16,72 @@ public class The_Duel : PhysicsGame
 
     private IntMeter player1Points;
     private IntMeter player2Points;
+    private DoubleMeter downCounter;
+    private Timer TimeCounter;
 
     public override void Begin()
     {
-        string questions = "../../../../../questions.txt";
-       
+        string questions = "../../../../../questions.txt";       
         lines = File.ReadAllLines(questions);
-
         CreateBoxes();
-
         int x = RandomGen.NextInt(lines.Length);
         GenerateQuestionAndAnswers(x);
         Menu();
         Points();
-      
-       
+        StartGame();
+        ReadTimeCounter();
 
 
 
         PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
     }
-    private void AloitaPeli()
+
+    void ReadTimeCounter()
+    {
+       
+        downCounter = new DoubleMeter(30);
+        TimeCounter = new Timer();
+        TimeCounter.Interval = 0.1;
+        TimeCounter.Timeout += TimeOut;
+        TimeCounter.Start();
+
+        Label TimeDisplay = new Label();
+        TimeDisplay.TextColor = Color.White;
+        TimeDisplay.DecimalPlaces = 1;
+        TimeDisplay.BindTo(downCounter);
+        Add(TimeDisplay);
+    }
+
+    private void TimeOut()
+    {
+        downCounter.Value -= 0.1;
+        if (downCounter.Value <= 0)
+        {
+            MessageDisplay.Add("Time out...");
+            TimeCounter.Stop();
+        }
+        Console.ReadLine();
+
+    }
+
+    private void StartGame()
     {
 
     }
+
 
     void Points()
     {
         player1Points = PlayerPoints(Screen.Left + 100.0, Screen.Top - 100.0);
         player2Points = PlayerPoints(Screen.Right - 100.0, Screen.Top - 100.0);
+       
     }
     IntMeter PlayerPoints(double x, double y)
     {
         IntMeter calculator = new IntMeter(0);
         calculator.MaxValue = 10;
-        
+         
 
         Label screen = new Label();
         screen.BindTo(calculator);
@@ -62,9 +92,35 @@ public class The_Duel : PhysicsGame
         screen.Color = Level.Background.Color;
         Add(screen);
 
-        return calculator;
+       
+        IntMeter collectedObjects = new IntMeter(0);
+        calculator.MaxValue = 5;
+        calculator.UpperLimit += PlayerWon;
+        calculator.AddTrigger(9000, TriggerDirection.Up, CallSound);
 
+        IntMeter playerLives = new IntMeter(3);
+        calculator.MinValue = 0;
+        calculator.LowerLimit += PlayerLoses;
+        
+        return calculator;
     }
+
+    private void CallSound()
+    {
+        PlaySound("OVER TEN POINTS");
+       
+    }
+
+    private void PlayerLoses()
+    {
+        MessageDisplay.Add("Player 1 lost the game.");
+    }
+
+    private void PlayerWon()
+    {
+        MessageDisplay.Add("Player 1 won the game.");
+    }
+
     private void GenerateQuestionAndAnswers(int lineNumber)
     {
         
@@ -130,8 +186,8 @@ public class The_Duel : PhysicsGame
         Mouse.ListenOn(option3, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option3, false);
         Mouse.ListenOn(option4, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, true);
         Mouse.ListenOn(option4, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, false);
-
         
+
     }
     void MovingInMenu(Label option, bool on)
     {

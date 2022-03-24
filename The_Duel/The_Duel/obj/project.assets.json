@@ -1156,19 +1156,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tuuli\\.nuget\\packages\\": {}
+    "C:\\Users\\isfando\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ohjelmointi1\\harjoitustyo\\The_Duel\\The_Duel\\The_Duel.csproj",
+      "projectUniqueName": "D:\\The_Duel\\ohj1ht\\The_Duel\\The_Duel\\The_Duel.csproj",
       "projectName": "The_Duel",
-      "projectPath": "C:\\ohjelmointi1\\harjoitustyo\\The_Duel\\The_Duel\\The_Duel.csproj",
-      "packagesPath": "C:\\Users\\tuuli\\.nuget\\packages\\",
-      "outputPath": "C:\\ohjelmointi1\\harjoitustyo\\The_Duel\\The_Duel\\obj\\",
+      "projectPath": "D:\\The_Duel\\ohj1ht\\The_Duel\\The_Duel\\The_Duel.csproj",
+      "packagesPath": "C:\\Users\\isfando\\.nuget\\packages\\",
+      "outputPath": "D:\\The_Duel\\ohj1ht\\The_Duel\\The_Duel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tuuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\isfando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1218,7 +1218,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
