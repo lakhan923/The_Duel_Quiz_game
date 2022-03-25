@@ -38,7 +38,7 @@
           "lib/net6.0/Jypeli.FarseerPhysics.dll": {}
         }
       },
-      "Jypeli.NET/11.1.4": {
+      "Jypeli.NET/11.1.5": {
         "type": "package",
         "dependencies": {
           "FontStashSharp": "1.0.4",
@@ -479,15 +479,15 @@
         "lib/net6.0/Jypeli.FarseerPhysics.xml"
       ]
     },
-    "Jypeli.NET/11.1.4": {
-      "sha512": "zWcgBG8u0QKRChYwic17hwWiFBGfv3vkEuXlCpLp36LERR4nWtQShhyD4pn8nnh+AXetbKIuUo2RR+nvTk2jDw==",
+    "Jypeli.NET/11.1.5": {
+      "sha512": "IcQib9MMXJrtzMdQf1j0f3h0/MGfCmgSk+F/7uqxVzzlOwfjsAk12pPhCjGzAgNoDScVnpoKMpFxefq3FfBbmQ==",
       "type": "package",
-      "path": "jypeli.net/11.1.4",
+      "path": "jypeli.net/11.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Jypeli.txt",
-        "jypeli.net.11.1.4.nupkg.sha512",
+        "jypeli.net.11.1.5.nupkg.sha512",
         "jypeli.net.nuspec",
         "jypeli_logo.png",
         "lib/net6.0-android31.0/Jypeli.aar",
@@ -1156,19 +1156,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tuuli\\.nuget\\packages\\": {}
+    "C:\\Users\\isfando\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ohjelmointi1\\harjoitustyo\\The_Duel\\The_Duel\\The_Duel.csproj",
+      "projectUniqueName": "D:\\The_DuelGame\\ohj1ht\\The_Duel\\The_Duel\\The_Duel.csproj",
       "projectName": "The_Duel",
-      "projectPath": "C:\\ohjelmointi1\\harjoitustyo\\The_Duel\\The_Duel\\The_Duel.csproj",
-      "packagesPath": "C:\\Users\\tuuli\\.nuget\\packages\\",
-      "outputPath": "C:\\ohjelmointi1\\harjoitustyo\\The_Duel\\The_Duel\\obj\\",
+      "projectPath": "D:\\The_DuelGame\\ohj1ht\\The_Duel\\The_Duel\\The_Duel.csproj",
+      "packagesPath": "C:\\Users\\isfando\\.nuget\\packages\\",
+      "outputPath": "D:\\The_DuelGame\\ohj1ht\\The_Duel\\The_Duel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tuuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\isfando\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1218,7 +1218,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

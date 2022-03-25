@@ -9,7 +9,7 @@
       "The_Duel/1.0.0": {
         "dependencies": {
           "Jypeli.FarseerPhysics.NET": "2.0.3",
-          "Jypeli.NET": "11.1.4"
+          "Jypeli.NET": "11.1.5"
         },
         "runtime": {
           "The_Duel.dll": {}
@@ -39,7 +39,7 @@
       },
       "Jypeli.FarseerPhysics.NET/2.0.3": {
         "dependencies": {
-          "Jypeli.NET": "11.1.4"
+          "Jypeli.NET": "11.1.5"
         },
         "runtime": {
           "lib/net6.0/Jypeli.FarseerPhysics.dll": {
@@ -48,7 +48,7 @@
           }
         }
       },
-      "Jypeli.NET/11.1.4": {
+      "Jypeli.NET/11.1.5": {
         "dependencies": {
           "FontStashSharp": "1.0.4",
           "Silk.NET.Input": "2.12.0",
@@ -60,8 +60,8 @@
         },
         "runtime": {
           "lib/net6.0/Jypeli.dll": {
-            "assemblyVersion": "11.1.4.0",
-            "fileVersion": "11.1.4.0"
+            "assemblyVersion": "11.1.5.0",
+            "fileVersion": "11.1.5.0"
           }
         }
       },
@@ -373,12 +373,12 @@
       "path": "jypeli.farseerphysics.net/2.0.3",
       "hashPath": "jypeli.farseerphysics.net.2.0.3.nupkg.sha512"
     },
-    "Jypeli.NET/11.1.4": {
+    "Jypeli.NET/11.1.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zWcgBG8u0QKRChYwic17hwWiFBGfv3vkEuXlCpLp36LERR4nWtQShhyD4pn8nnh+AXetbKIuUo2RR+nvTk2jDw==",
-      "path": "jypeli.net/11.1.4",
-      "hashPath": "jypeli.net.11.1.4.nupkg.sha512"
+      "sha512": "sha512-IcQib9MMXJrtzMdQf1j0f3h0/MGfCmgSk+F/7uqxVzzlOwfjsAk12pPhCjGzAgNoDScVnpoKMpFxefq3FfBbmQ==",
+      "path": "jypeli.net/11.1.5",
+      "hashPath": "jypeli.net.11.1.5.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",

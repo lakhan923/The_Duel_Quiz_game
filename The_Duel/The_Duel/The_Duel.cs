@@ -13,34 +13,46 @@ public class The_Duel : PhysicsGame
     private Label question = new Label();
     string correctAnswer;
     private string[] data;
-
-    private IntMeter player1Points;
-    private IntMeter player2Points;
+    private IntMeter[] playerPoints = new IntMeter[2];
     private DoubleMeter downCounter;
     private Timer TimeCounter;
+    private int playerInTurn;
+
 
     public override void Begin()
     {
-        string questions = "../../../../../questions.txt";       
+        string questions = "../../../../../questions.txt";
         lines = File.ReadAllLines(questions);
         CreateBoxes();
         int x = RandomGen.NextInt(lines.Length);
-        GenerateQuestionAndAnswers(x);
         Menu();
         Points();
         StartGame();
         ReadTimeCounter();
+        GenerateQuestionAndAnswers(x);
+
 
 
 
         PhoneBackButton.Listen(ConfirmExit, "Lopeta peli");
         Keyboard.Listen(Key.Escape, ButtonState.Pressed, ConfirmExit, "Lopeta peli");
+        Keyboard.Listen(Key.A, ButtonState.Pressed, SelectPlayer, "player1 answer", 0);
+        Keyboard.Listen(Key.B, ButtonState.Pressed, SelectPlayer, "player2 answer", 1);
+    }
+
+    private void SelectPlayer(int playerIndex)
+    {
+        if (playerInTurn == -1) // no player selected
+        {
+            playerInTurn = playerIndex;
+            MessageDisplay.Add("player in turn: " + (playerInTurn + 1));
+        }
     }
 
     void ReadTimeCounter()
     {
        
-        downCounter = new DoubleMeter(30);
+        downCounter = new DoubleMeter(10);
         TimeCounter = new Timer();
         TimeCounter.Interval = 0.1;
         TimeCounter.Timeout += TimeOut;
@@ -75,9 +87,9 @@ public class The_Duel : PhysicsGame
 
     void Points()
     {
-        player1Points = PlayerPoints(Screen.Left + 100.0, Screen.Top - 100.0);
-        player2Points = PlayerPoints(Screen.Right - 100.0, Screen.Top - 100.0);
-       
+        playerPoints[0] = PlayerPoints(Screen.Left + 100.0, Screen.Top - 100.0);
+        playerPoints[1] = PlayerPoints(Screen.Right - 100.0, Screen.Top - 100.0);
+
     }
     IntMeter PlayerPoints(double x, double y)
     {
@@ -140,6 +152,8 @@ public class The_Duel : PhysicsGame
             box.Text = data[i + 1];
         }
 
+        downCounter.Value = downCounter.DefaultValue;
+        playerInTurn = -1;   // -1 means not a player 
     }
 
 
@@ -175,10 +189,10 @@ public class The_Duel : PhysicsGame
             Add(option);
         }
 
-        Mouse.ListenOn(option1, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option1, correctAnswer);
-        Mouse.ListenOn(option2, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option2, correctAnswer);
-        Mouse.ListenOn(option3, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option3, correctAnswer);
-        Mouse.ListenOn(option4, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option4, correctAnswer);
+        Mouse.ListenOn(option1, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option1);
+        Mouse.ListenOn(option2, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option2);
+        Mouse.ListenOn(option3, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option3);
+        Mouse.ListenOn(option4, MouseButton.Left, ButtonState.Pressed, ChooseAnswer, null, option4);
 
         Mouse.ListenOn(option1, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option1, true);
         Mouse.ListenOn(option1, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option1, false);
@@ -203,16 +217,34 @@ public class The_Duel : PhysicsGame
         }
     }
 
-    void ChooseAnswer(Label option, string correctAnswer)
+    void ChooseAnswer(Label option)
     {
-        int correctIndex = int.Parse(correctAnswer);
-        if (option.Text == data[correctIndex])
-            MessageDisplay.Add("Correct!");
-        //option.TextColor = Color.Green;
-        else MessageDisplay.Add("Incorrect!");
-            //option.TextColor = Color.Aqua;
-    }
+        if (playerInTurn == -1)
+        {
+            MessageDisplay.Add("no player is selected");
 
+            return;
+        }
+
+        int correctIndex = int.Parse(correctAnswer);
+        if (option.Text == data[correctIndex]) // right answer 
+        {
+            MessageDisplay.Add("Correct!");
+            IntMeter currentPlayerPoints = playerPoints[playerInTurn];
+            currentPlayerPoints.AddValue(1);
+
+            //option.TextColor = Color.Green;
+        }
+        else // wrong answer
+        {
+            MessageDisplay.Add("Incorrect!");
+            //option.TextColor = Color.Aqua;
+        }
+
+        int x = RandomGen.NextInt(lines.Length);
+        GenerateQuestionAndAnswers(x);
+
+    }
 
 }
 
