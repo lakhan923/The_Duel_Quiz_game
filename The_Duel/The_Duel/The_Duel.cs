@@ -238,6 +238,9 @@ public class The_Duel : PhysicsGame
         else // wrong answer
         {
             MessageDisplay.Add("Incorrect!");
+            IntMeter currentPlayerPoints = playerPoints[playerInTurn];
+            currentPlayerPoints.AddValue(-1);
+
             //option.TextColor = Color.Aqua;
         }
 
