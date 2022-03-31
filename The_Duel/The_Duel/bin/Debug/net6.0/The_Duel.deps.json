@@ -9,7 +9,8 @@
       "The_Duel/1.0.0": {
         "dependencies": {
           "Jypeli.FarseerPhysics.NET": "2.0.3",
-          "Jypeli.NET": "11.1.5"
+          "Jypeli.NET": "11.1.5",
+          "docfx.console": "2.59.0"
         },
         "runtime": {
           "The_Duel.dll": {}
@@ -23,6 +24,7 @@
           }
         }
       },
+      "docfx.console/2.59.0": {},
       "FontStashSharp/1.0.4": {
         "dependencies": {
           "Cyotek.Drawing.BitmapFont": "2.0.1",
@@ -358,6 +360,13 @@
       "sha512": "sha512-8C8Vdvf8p6RIOBNFE99ZNPWFxwV/ZT1wk11cajuL3+6/e5DBGPHe+ZjxLu2efTWQ1YvfLh4KpP2epUZ9z/WcFQ==",
       "path": "cyotek.drawing.bitmapfont/2.0.1",
       "hashPath": "cyotek.drawing.bitmapfont.2.0.1.nupkg.sha512"
+    },
+    "docfx.console/2.59.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OmHpFa3TGrvWC5371OV5PJxhoOsJH6xSrTCb/rght10XMIdtNRR4VDuHVkBIS1YfpgDx/5gBYCtkmVDWjjj0ig==",
+      "path": "docfx.console/2.59.0",
+      "hashPath": "docfx.console.2.59.0.nupkg.sha512"
     },
     "FontStashSharp/1.0.4": {
       "type": "package",

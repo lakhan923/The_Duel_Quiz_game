@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>WinExe</OutputType>
@@ -8,6 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="docfx.console" Version="2.59.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	      <!--when project is rebuilt the docfx documentation is generated on project root level in a scattered way which we dont want.-->
+		  <ExcludeAssets>buildtransitive</ExcludeAssets>
+		</PackageReference>
         <PackageReference Include="Jypeli.NET" Version="11.*" />
         <PackageReference Include="Jypeli.FarseerPhysics.NET" Version="2.*" />
     </ItemGroup>
