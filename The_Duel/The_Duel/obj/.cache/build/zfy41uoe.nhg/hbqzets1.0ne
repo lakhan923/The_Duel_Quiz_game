@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class The_Duel
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class The_Duel
+   ">
+    <meta name="generator" content="docfx 2.59.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Program.The_Duel">
+  
+  
+  <h1 id="Program_The_Duel" data-uid="Program.The_Duel" class="text-break">Class The_Duel
+  </h1>
+  <div class="markdown level0 summary"><p>This is the main class for the questioning competition between two player.
+The player will see a question and they can click on the answer.
+They get a score depending on w</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Jypeli.Game</span></div>
+    <div class="level2"><span class="xref">Jypeli.PhysicsGameBase</span></div>
+    <div class="level3"><span class="xref">Jypeli.PhysicsGame</span></div>
+    <div class="level4"><span class="xref">The_Duel</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Jypeli.Controls.ControlContexted</span></div>
+    <div><span class="xref">Jypeli.GameObjectContainer</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Jypeli.PhysicsGame.Instance</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.Joints</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.collisionHandlers</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.protectedCollisionHandlers</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.OnObjectAdded(Jypeli.IGameObject)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.OnObjectRemoved(Jypeli.IGameObject)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.StopAll()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.ClearAll()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.Update(Jypeli.Time)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.Add(Jypeli.IAxleJoint)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler&lt;O, T&gt;(O, Jypeli.CollisionHandler&lt;O, T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.IPhysicsObject, Jypeli.CollisionHandler&lt;Jypeli.IPhysicsObject, Jypeli.IPhysicsObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.PhysicsObject, Jypeli.CollisionHandler&lt;Jypeli.PhysicsObject, Jypeli.PhysicsObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.PhysicsObject, Jypeli.CollisionHandler&lt;Jypeli.PhysicsObject, Jypeli.PhysicsStructure&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.PhysicsStructure, Jypeli.CollisionHandler&lt;Jypeli.PhysicsStructure, Jypeli.PhysicsObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.PhysicsStructure, Jypeli.CollisionHandler&lt;Jypeli.PhysicsStructure, Jypeli.PhysicsStructure&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandlerByRef&lt;O, T&gt;(O, T, Jypeli.CollisionHandler&lt;O, T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandlerByTag&lt;O, T&gt;(O, System.Object, Jypeli.CollisionHandler&lt;O, T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler&lt;O, T&gt;(O, System.Object, Jypeli.CollisionHandler&lt;O, T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.IPhysicsObject, System.Object, Jypeli.CollisionHandler&lt;Jypeli.IPhysicsObject, Jypeli.IPhysicsObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.AddCollisionHandler(Jypeli.PhysicsObject, System.Object, Jypeli.CollisionHandler&lt;Jypeli.PhysicsObject, Jypeli.PhysicsObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.RemoveCollisionHandlers(Jypeli.PhysicsObject, Jypeli.PhysicsObject, System.Object, System.Delegate)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.Engine</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.Gravity</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.PhysicsGameBase.PhysicsEnabled</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadImage(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadImageFromResources(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadImages(System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadImages(System.String, System.Int32, System.Int32, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.PlaySound(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadSoundEffect(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadSoundEffectFromResources(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadSoundEffects(System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LoadFont(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ClearControls()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ShowControlHelp()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ShowControlHelp(Jypeli.Controls.IController)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AssertInitialized(System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DoNextUpdate(System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DoNextUpdate&lt;T1&gt;(System.Action&lt;T1&gt;, T1)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DoNextUpdate&lt;T1, T2&gt;(System.Action&lt;T1, T2&gt;, T1, T2)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AssertInitialized&lt;T1&gt;(System.Action&lt;T1&gt;, T1)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ConfirmExit()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ConfirmExit(System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.OnExiting(System.Object, System.EventArgs)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Add(Jypeli.Effects.Light)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ClearLights()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AddCustomHandler(System.Func&lt;System.Boolean&gt;, System.Action)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AddCustomHandler&lt;T&gt;(T, System.Predicate&lt;T&gt;, System.Action&lt;T&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AddCustomHandler&lt;T1, T2&gt;(T1, T2, System.Func&lt;T1, T2, System.Boolean&gt;, System.Action&lt;T1, T2&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AddCustomHandler&lt;T1, T2, T3&gt;(T1, T2, T3, System.Func&lt;T1, T2, T3, System.Boolean&gt;, System.Action&lt;T1, T2, T3&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.UpdateHandlers(Jypeli.Time)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AddFactory&lt;T&gt;(System.String, Jypeli.Factory.FactoryMethod)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.RemoveFactory&lt;T&gt;(System.String, Jypeli.Factory.FactoryMethod)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FactoryCreate&lt;T&gt;(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Run(System.Boolean, System.Boolean, System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.RunOneFrame(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Initialize()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Paint(Jypeli.Canvas)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.OnExit()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Exit()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SetWindowPosition(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.CenterWindow()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SetWindowSize(System.Int32, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SetWindowSize(System.Int32, System.Int32, System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Add(Jypeli.IGameObject)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Add(Jypeli.IGameObject, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Add(Jypeli.Layer)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Remove(Jypeli.IGameObject)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Remove(Jypeli.Layer)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Remove(Jypeli.Effects.Light)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ClearGameObjects()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ResetLayers()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.RemoveAllLayers()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjects(System.Predicate&lt;Jypeli.GameObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetAllObjects()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsWithTag(System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsWithTag(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetFirstObject(System.Predicate&lt;Jypeli.GameObject&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsAt(Jypeli.Vector)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsAt(Jypeli.Vector, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectAt(Jypeli.Vector)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectAt(Jypeli.Vector, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsAt(Jypeli.Vector, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectAt(Jypeli.Vector, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsAt(Jypeli.Vector, System.Object, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectAt(Jypeli.Vector, System.Object, System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetObjectsBetween(Jypeli.Vector, Jypeli.Vector)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetFirstWidget(System.Predicate&lt;Jypeli.Widget&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GetWidgetAt(Jypeli.Vector)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Pause()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ClearTimers()</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.PausedUpdate(Jypeli.Time)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.OnUpdate(System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.OnDraw(System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.MediaPlayer</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.MasterVolume</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ResourceContent</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Keyboard</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Mouse</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Accelerometer</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.TouchPanel</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.PhoneBackButton</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GameControllers</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ControllerOne</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ControllerTwo</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ControllerThree</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ControllerFour</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.ControlContext</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.IsModal</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DebugLayer</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DebugKeyEnabled</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DebugScreenVisible</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FPSWindow</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FPSDisplay</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LayerWindow</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LayerDisplay</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Wind</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.TotalFramesToRun</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FrameCounter</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SavedFrameCounter</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FramesToSkip</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SaveOutput</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SaveOutputToConsole</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Headless</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Device</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DataStorage</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FarseerGame</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Camera</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Name</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.AudioEnabled</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Level</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Closing</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.GraphicsDevice</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.IsFullScreen</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Screen</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.SmoothTextures</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Layers</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.StaticLayers</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.DynamicLayers</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.MinLayer</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.MaxLayer</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.LayerCount</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.FixedTimeStep</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.IsPaused</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Time</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.RealTime</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.MessageDisplay</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.InstanceInitialized</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.Exiting</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.TextInput</span>
+    </div>
+    <div>
+      <span class="xref">Jypeli.Game.WindowSizeChanged</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Program.html">Program</a></h6>
+  <h6><strong>Assembly</strong>: The_Duel.dll</h6>
+  <h5 id="Program_The_Duel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class The_Duel : PhysicsGame, ControlContexted, GameObjectContainer, IDisposable</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Program_The_Duel_Begin_" data-uid="Program.The_Duel.Begin*"></a>
+  <h4 id="Program_The_Duel_Begin" data-uid="Program.The_Duel.Begin">Begin()</h4>
+  <div class="markdown level1 summary"><p>:TODO</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Begin()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Jypeli.Game.Begin()</span></div>
+  
+  
+  <a id="Program_The_Duel_CreateBoxes_" data-uid="Program.The_Duel.CreateBoxes*"></a>
+  <h4 id="Program_The_Duel_CreateBoxes" data-uid="Program.The_Duel.CreateBoxes">CreateBoxes()</h4>
+  <div class="markdown level1 summary"><p>:TODO</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreateBoxes()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Jypeli.Controls.ControlContexted</span>
+  </div>
+  <div>
+      <span class="xref">Jypeli.GameObjectContainer</span>
+  </div>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

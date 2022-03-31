@@ -15,7 +15,6 @@ namespace Program
     /// They get a positive and negative point depending on right on wrong answer respectively.
     /// The score can not be lower than 0
     /// There is a limited time to answer each question.
-    /// :TODO lost message are shown when score is zero and the user gives a wrong answer. but the user is still playing the game
     /// </summary>
     public class The_Duel : PhysicsGame
     {
@@ -140,7 +139,6 @@ namespace Program
         private void CallSound()
         {
             PlaySound("OVER TEN POINTS");
-
         }
 
         /// <summary>
@@ -181,11 +179,9 @@ namespace Program
         /// <param name="lineNumber">index of question in the text files where question are stored</param>
         private void GenerateQuestionAndAnswers(int lineNumber)
         {
-
             data = lines[lineNumber].Split('|');
+
             // set the question text 
-
-
             question.Text = data[0];
             correctAnswer = data[data.Length - 1];
 
@@ -205,7 +201,6 @@ namespace Program
         /// </summary>
         public void CreateBoxes()
         {
-
             // create a question label
             for (int i = 0; i < answers.Length; i++)
             {
@@ -220,7 +215,6 @@ namespace Program
             question.Y = 20 + answers[0].Y;
             Add(question);
         }
-
 
         /// <summary>
         /// Display answer menu on the UI screen and handle the events related to player clicking on those answers.
@@ -252,8 +246,6 @@ namespace Program
             Mouse.ListenOn(option3, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option3, false);
             Mouse.ListenOn(option4, HoverState.Enter, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, true);
             Mouse.ListenOn(option4, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, false);
-
-
         }
 
         /// <summary>
@@ -292,7 +284,7 @@ namespace Program
                 MessageDisplay.Add("Correct!");
                 IntMeter currentPlayerPoints = playerPoints[playerInTurn];
                 currentPlayerPoints.AddValue(1);
-               
+
                 if (currentPlayerPoints.Value == currentPlayerPoints.MaxValue)
                 {
                     //abit hacky logic
@@ -318,11 +310,6 @@ namespace Program
 
             int x = RandomGen.NextInt(lines.Length);
             GenerateQuestionAndAnswers(x);
-
-
         }
-
-
-
     }
 }
