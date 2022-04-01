@@ -6,8 +6,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+
 namespace Program
 {
+    /// @author Tuulia Hynynen & Laiba Khan
+    /// @version 1.4.2022
     /// <summary>
     /// This is the main class for the questioning competition between two player.
     /// The player which click first after appeance of a question will answer the question.
@@ -48,6 +51,7 @@ namespace Program
             Keyboard.Listen(Key.B, ButtonState.Pressed, SelectPlayer, "player2 answer", 1);
         }
 
+
         /// <summary>
         /// To select a player amongst the two players.
         /// </summary>
@@ -60,6 +64,7 @@ namespace Program
                 MessageDisplay.Add("player in turn: " + (playerInTurn + 1));
             }
         }
+
 
         /// <summary>
         /// The timer counter for a question. The handles the time in which a question should be answered.
@@ -81,6 +86,7 @@ namespace Program
             TimeDisplay.Y = 200;
             Add(TimeDisplay);
         }
+
 
         /// <summary>
         /// Used to display a time out message when a question is not answered in the specified amount of time
@@ -106,6 +112,7 @@ namespace Program
             playerPoints[1] = PlayerPoints(Screen.Right - 100.0, Screen.Top - 100.0, 1);
 
         }
+
 
         /// <summary>
         /// Show updated points for each player on the screen. Addtionaly play music when a player wins.
@@ -133,6 +140,7 @@ namespace Program
             return calculator;
         }
 
+
         /// <summary>
         /// Play sound along with a text message
         /// </summary>
@@ -140,6 +148,7 @@ namespace Program
         {
             PlaySound("OVER TEN POINTS");
         }
+
 
         /// <summary>
         /// Display message when player one is the loser
@@ -149,6 +158,7 @@ namespace Program
             MessageDisplay.Add("Player 1 lost the game! Sorry try again!");
         }
 
+
         /// <summary>
         /// Display message when player one is the winner
         /// </summary>
@@ -156,6 +166,7 @@ namespace Program
         {
             MessageDisplay.Add("Player 1 won the game! Congrulations!");
         }
+
 
         /// <summary>
         /// Display message when player 2 is the loser
@@ -165,6 +176,7 @@ namespace Program
             MessageDisplay.Add("Player 2 lost the game! Sorry try again!");
         }
 
+
         /// <summary>
         /// Display message when player two is the winner
         /// </summary>
@@ -172,6 +184,7 @@ namespace Program
         {
             MessageDisplay.Add("Player 2 won the game! Congrulations!");
         }
+
 
         /// <summary>
         /// Generate questions and answers on the UI screen. The question and answer are read from a text file.
@@ -196,6 +209,7 @@ namespace Program
             playerInTurn = -1;   // -1 means not a player 
         }
 
+
         /// <summary>
         /// Create UI labels to display on the screen. A label can have text inside it.
         /// </summary>
@@ -215,6 +229,7 @@ namespace Program
             question.Y = 20 + answers[0].Y;
             Add(question);
         }
+
 
         /// <summary>
         /// Display answer menu on the UI screen and handle the events related to player clicking on those answers.
@@ -248,6 +263,7 @@ namespace Program
             Mouse.ListenOn(option4, HoverState.Exit, MouseButton.None, ButtonState.Irrelevant, MovingInMenu, null, option4, false);
         }
 
+
         /// <summary>
         /// Highlight an answer from the answer menu when mouse cursor is hovered over it.
         /// </summary>
@@ -264,6 +280,7 @@ namespace Program
                 option.TextColor = Color.Black;
             }
         }
+
 
         /// <summary>
         /// Handles the user click on an answer option from answers menu. Also declares the loser player incase one player wins.
@@ -311,5 +328,9 @@ namespace Program
             int x = RandomGen.NextInt(lines.Length);
             GenerateQuestionAndAnswers(x);
         }
+
+
     }
+
+
 }
