@@ -24,7 +24,7 @@ namespace Program
         private string[] lines;
         private Label[] answers = new Label[4];
         private Label question = new Label();
-        string correctAnswer;
+        private string correctAnswer;
         private string[] data;
         private IntMeter[] playerPoints = new IntMeter[2];
         private DoubleMeter downCounter;
@@ -98,6 +98,9 @@ namespace Program
             {
                 MessageDisplay.Add("Time out...");
                 TimeCounter.Stop();
+                IntMeter currentPlayerPoints = playerPoints[playerInTurn];
+                currentPlayerPoints.AddValue(-1);
+               
             }
             Console.ReadLine();
 
