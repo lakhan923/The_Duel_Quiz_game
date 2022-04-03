@@ -21,14 +21,49 @@ namespace Program
     /// </summary>
     public class The_Duel : PhysicsGame
     {
+        /// <summary>
+        /// Saves the questions and answers from text file. One line = One question and four answer options.
+        /// </summary>
         private string[] lines;
+
+        /// <summary>
+        /// Four answer options for question.
+        /// </summary>
         private Label[] answers = new Label[4];
+
+        /// <summary>
+        /// Question.
+        /// </summary>
         private Label question = new Label();
+
+        /// <summary>
+        /// Correct answer for the question.
+        /// </summary>
         private string correctAnswer;
+
+        /// <summary>
+        /// Saves the question, answer options and correct answer.
+        /// </summary>
         private string[] data;
+
+        /// <summary>
+        /// Calculates points for two players.
+        /// </summary>
         private IntMeter[] playerPoints = new IntMeter[2];
+
+        /// <summary>
+        /// Shows how much player has time for answer.
+        /// </summary>
         private DoubleMeter downCounter;
+
+        /// <summary>
+        /// Timer gives player limited time for answering.
+        /// </summary>
         private Timer TimeCounter;
+
+        /// <summary>
+        /// The player who is in turn for answering the question.
+        /// </summary>
         private int playerInTurn;
 
         /// <summary>
@@ -96,11 +131,24 @@ namespace Program
             downCounter.Value -= 0.1;
             if (downCounter.Value <= 0)
             {
-                MessageDisplay.Add("Time out...");
-                TimeCounter.Stop();
-                IntMeter currentPlayerPoints = playerPoints[playerInTurn];
-                currentPlayerPoints.AddValue(-1);
-               
+                if (playerInTurn == -1)
+                {
+                    MessageDisplay.Add("Time out...");
+                    TimeCounter.Stop();
+                    int x = RandomGen.NextInt(lines.Length);
+                    GenerateQuestionAndAnswers(x);
+                    ReadTimeCounter();
+                }
+                else
+                {
+                    MessageDisplay.Add("Time out...");
+                    TimeCounter.Stop();
+                    IntMeter currentPlayerPoints = playerPoints[playerInTurn];
+                    currentPlayerPoints.AddValue(-1);
+                }
+                
+
+                
             }
             Console.ReadLine();
 
