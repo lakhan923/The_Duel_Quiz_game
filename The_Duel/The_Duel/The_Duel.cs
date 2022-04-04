@@ -59,16 +59,19 @@ namespace Program
         /// <summary>
         /// Timer gives player limited time for answering.
         /// </summary>
-        private Timer TimeCounter;
+        private Timer timeCounter;
 
         /// <summary>
         /// The player who is in turn for answering the question.
         /// </summary>
         private int playerInTurn;
 
+        private Label timeDisplay;
+
         /// <summary>
         /// Main method where game execution begins
         /// </summary>
+        
         public override void Begin()
         {
             string questions = "../../../../../questions.txt";
@@ -108,18 +111,18 @@ namespace Program
         {
 
             downCounter = new DoubleMeter(20);
-            TimeCounter = new Timer();
-            TimeCounter.Interval = 0.1;
-            TimeCounter.Timeout += TimeOut;
-            TimeCounter.Start();
+            timeCounter = new Timer();
+            timeCounter.Interval = 0.1;
+            timeCounter.Timeout += TimeOut;
+            timeCounter.Start();
 
-            Label TimeDisplay = new Label();
-            TimeDisplay.TextColor = Color.Red;
-            TimeDisplay.DecimalPlaces = 1;
-            TimeDisplay.BindTo(downCounter);
-            TimeDisplay.X = 0.0;
-            TimeDisplay.Y = 200;
-            Add(TimeDisplay);
+            timeDisplay = new Label();
+            timeDisplay.TextColor = Color.Red;
+            timeDisplay.DecimalPlaces = 1;
+            timeDisplay.BindTo(downCounter);
+            timeDisplay.X = 0.0;
+            timeDisplay.Y = 200;
+            Add(timeDisplay);
         }
 
 
@@ -134,15 +137,17 @@ namespace Program
                 if (playerInTurn == -1)
                 {
                     MessageDisplay.Add("Time out...");
-                    TimeCounter.Stop();
+                    timeCounter.Stop();
                     int x = RandomGen.NextInt(lines.Length);
                     GenerateQuestionAndAnswers(x);
+                    timeCounter.Reset();
+                    timeDisplay.Destroy();
                     ReadTimeCounter();
                 }
                 else
                 {
                     MessageDisplay.Add("Time out...");
-                    TimeCounter.Stop();
+                    timeCounter.Stop();
                     IntMeter currentPlayerPoints = playerPoints[playerInTurn];
                     currentPlayerPoints.AddValue(-1);
                 }
