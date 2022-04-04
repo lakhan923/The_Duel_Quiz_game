@@ -66,6 +66,9 @@ namespace Program
         /// </summary>
         private int playerInTurn;
 
+        /// <summary>
+        /// Label for timer to show how much time is left for answering
+        /// </summary>
         private Label timeDisplay;
 
         /// <summary>
@@ -107,7 +110,7 @@ namespace Program
         /// <summary>
         /// The timer counter for a question. The handles the time in which a question should be answered.
         /// </summary>
-        void ReadTimeCounter()
+        private void ReadTimeCounter()
         {
 
             downCounter = new DoubleMeter(20);
@@ -162,7 +165,7 @@ namespace Program
         /// <summary>
         /// Update point for each player
         /// </summary>
-        void Points()
+        private void Points()
         {
             playerPoints[0] = PlayerPoints(Screen.Left + 100.0, Screen.Top - 100.0, 0);
             playerPoints[1] = PlayerPoints(Screen.Right - 100.0, Screen.Top - 100.0, 1);
@@ -290,7 +293,7 @@ namespace Program
         /// <summary>
         /// Display answer menu on the UI screen and handle the events related to player clicking on those answers.
         /// </summary>
-        void Menu()
+       private void Menu()
         {
             List<Label> options;
             options = new List<Label>();
@@ -325,7 +328,7 @@ namespace Program
         /// </summary>
         /// <param name="option">The answer option in the answer menu</param>
         /// <param name="on">status of mouse cursor over answer option in the answer menu</param>
-        void MovingInMenu(Label option, bool on)
+        private void MovingInMenu(Label option, bool on)
         {
             if (on)
             {
@@ -342,7 +345,7 @@ namespace Program
         /// Handles the user click on an answer option from answers menu. Also declares the loser player incase one player wins.
         /// </summary>
         /// <param name="option">The option on which the click occured</param>
-        void ChooseAnswer(Label option)
+        private void ChooseAnswer(Label option)
         {
             if (playerInTurn == -1)
             {
