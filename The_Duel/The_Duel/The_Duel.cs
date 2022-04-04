@@ -153,13 +153,9 @@ namespace Program
                     timeCounter.Stop();
                     IntMeter currentPlayerPoints = playerPoints[playerInTurn];
                     currentPlayerPoints.AddValue(-1);
-                }
-                
-
-                
+                }                              
             }
             Console.ReadLine();
-
         }
 
         /// <summary>

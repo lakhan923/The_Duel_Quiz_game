@@ -193,3 +193,4 @@ D:\The_Duel\The_Duel\The_Duel\obj\Debug\net6.0\The_Duel.dll
 D:\The_Duel\The_Duel\The_Duel\obj\Debug\net6.0\ref\The_Duel.dll
 D:\The_Duel\The_Duel\The_Duel\obj\Debug\net6.0\The_Duel.pdb
 D:\The_Duel\The_Duel\The_Duel\obj\Debug\net6.0\The_Duel.genruntimeconfig.cache
+D:\The_Duel\The_Duel\The_Duel\obj\Debug\net6.0\The_Duel.csproj.AssemblyReference.cache
